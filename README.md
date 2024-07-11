@@ -86,3 +86,4 @@ to be precise:
 
 ![alt text](image-7.png)
 
+*this line marks the end of the feature 4*
