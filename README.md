@@ -1,6 +1,25 @@
+
 # to-squash-or-not-to-squash
 
-## Motivation
+<!-- vscode-markdown-toc -->
+* 1. [Motivation](#Motivation)
+* 2. [The experiments](#Theexperiments)
+	* 2.1. [NO Squash](#NOSquash)
+		* 2.1.1. [Observations](#Observations)
+		* 2.1.2. [Observations](#Observations-1)
+* 3. [SQUASHING](#SQUASHING)
+* 4. [Blank down merges](#Blankdownmerges)
+* 5. [Punitive when work is started on old branch.](#Punitivewhenworkisstartedonoldbranch.)
+* 6. [Other issues and possible solutions](#Otherissuesandpossiblesolutions)
+* 7. [Alternatives and solutions](#Alternativesandsolutions)
+
+<!-- vscode-markdown-toc-config
+	numbering=true
+	autoSave=true
+	/vscode-markdown-toc-config -->
+<!-- /vscode-markdown-toc -->
+
+##  1. <a name='Motivation'></a>Motivation
 
 While squashing to develop helps maintain a linear history, it introduces other challenges in the typical git-flow strategy:
 
@@ -8,7 +27,7 @@ While squashing to develop helps maintain a linear history, it introduces other 
 * When develop is merge commited to main (aka. master), on the next PR you're required to merge down an empty PR
 * Which is not an issue, unless the develop branch is also proctected, which adds to non-value-added busy work.
 
-## The experiments
+##  2. <a name='Theexperiments'></a>The experiments
 
 We will create **8 pull-requests (PRs)** total, the first 4 PRs (dev->main->dev-main) will NOT be squashed, the last 4 will be squashed.
 
@@ -18,9 +37,9 @@ Additionally we want to show that squashing necessitates an empty down merge.
 
 *This line marks the first commit to feature*
 
-### NO Squash
+###  2.1. <a name='NOSquash'></a>NO Squash
 
-#### Observations
+####  2.1.1. <a name='Observations'></a>Observations
 
 ##### First Release
 
@@ -45,7 +64,7 @@ Switched to a new branch 'feature-2'
 
 *This line marks the commit to feature-2*
 
-#### Observations
+####  2.1.2. <a name='Observations-1'></a>Observations
 
 Third PR (feature-2 to develop)
 
@@ -61,7 +80,7 @@ Merge committing from feature-> develop -> main does **NOT** cause the empty dow
 
 ![alt text](image-3.png)
 
-## SQUASHING
+##  3. <a name='SQUASHING'></a>SQUASHING
 
 To show that squashing results in merge conflicts with no file on the subsequent merge to main.
 
@@ -150,7 +169,7 @@ However this did not trigger immediately as expected it also required the additi
 
 # Conclusion
 
-## Blank down merges
+##  4. <a name='Blankdownmerges'></a>Blank down merges
 
 Squashing to develop while using gitflow to keep a linear history has a few drawbacks
 
@@ -196,7 +215,7 @@ git branch -r --contains a2f3d55
 git diff 1846048 a2f3d55  # Is empty
 ```
 
-## Punitive when work is started on old branch.
+##  5. <a name='Punitivewhenworkisstartedonoldbranch.'></a>Punitive when work is started on old branch.
 
 
 Merging is impossible, even locally. Case in point. A developer started working on a sprint story, but forgot to run `git checkout -b feature-x`, realizing after the fact, he tried to `fetch` and `merge` latest from develop like this.
@@ -257,7 +276,7 @@ Fast-forward
 
 The irony here is that a branch that's closer to `develop`, `feature-4` is *harder* to merge, than `feature-2` that is older and further apart, was automatically merged w/o manual intervention.
 
-## Other issues and possible solutions
+##  6. <a name='Otherissuesandpossiblesolutions'></a>Other issues
 
 A screen grab from [SO](https://stackoverflow.com/questions/41139783/gitflow-should-i-squash-commits-when-merging-from-a-release-branch-into-master) indicates that originally there was never any mention of squash in gitflow:
 
@@ -276,7 +295,7 @@ Other posters in SO highlighted other drawbacks with squashes in PRs:
 1. It keeps you from putting `git bisect` in your toolbox
 2. Could have simply used tags - less destructive
 
-## Alternatives and solutions
+##  7. <a name='Alternativesandsolutions'></a>Alternatives and solutions
 
 The empty downmerge problem requires 3 ingredients to be present, gitlfow, squash and branch protection.
 
