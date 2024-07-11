@@ -300,7 +300,7 @@ Other posters in SO highlighted other drawbacks with squashes in PRs:
 The empty downmerge problem requires 3 ingredients to be present, gitlfow, squash and branch protection.
 
 1. So one option is to simply disable the branch-protection rule
-2. Another option is to not squash
+2. Another option is to not squash, or squash/rebase locally before pushing to the remote feature branch.
 3. If none of the formers is palatable, we can look at alternatives to gitflow such as: 
    1. [TBD](https://trunkbaseddevelopment.com/) or 
    2. [1-flow](https://www.endoflineblog.com/oneflow-a-git-branching-model-and-workflow)
