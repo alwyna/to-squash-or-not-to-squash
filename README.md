@@ -18,3 +18,27 @@ Additionally we want to show that squashing necessitates an empty down merge.
 
 *This line marks the first commit to feature*
 
+### NO Squash
+
+#### Observations
+
+##### First Release
+
+First PR (feature-1 to develop)
+
+**NO CONFLICT**
+![alt text](image.png)
+
+Second PR (develop to main)
+
+**NO CONFLICT**
+![alt text](image-1.png)
+
+##### Second Release
+
+We branched off develop that had the merge commit from `feature-1`
+
+> ~/workspace/to-squash-or-not-to-squash$ git checkout -b feature-2
+Switched to a new branch 'feature-2'
+
+*This line marks the commit to feature-2*
