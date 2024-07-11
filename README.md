@@ -42,3 +42,28 @@ We branched off develop that had the merge commit from `feature-1`
 Switched to a new branch 'feature-2'
 
 *This line marks the commit to feature-2*
+
+#### Observations
+
+Third PR (feature-2 to develop)
+
+**NO CONFLICT**
+![alt text](image-2.png)
+
+Fourth PR (develop to main) **!MOMENT OF TRUTH!**
+
+**NO CONFLICT**
+
+Merge committing from feature-> develop -> main does **NOT** cause the empty down-merge issue.
+![alt text](image-3.png)
+
+## SQUASHING
+
+To show that squashing results in merge conflicts with no file on the subsequent merge to main.
+
+We branched off develop that had the merge commit from `feature-2`
+
+> ~/workspace/to-squash-or-not-to-squash$ git checkout -b feature-3
+Switched to a new branch 'feature-3'
+
+*This line marks the commit to feature-3*
