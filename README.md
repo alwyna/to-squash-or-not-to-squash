@@ -33,7 +33,7 @@ We will create **8 pull-requests (PRs)** total, the first 4 PRs (dev->main->dev-
 
 We want to test if merge commit to develop avoids an empty down-merge to develop on the second set of PRs.
 
-Additionally we want to show that squashing necessitates an empty down merge.
+Additionally, we want to show that squashing necessitates an empty down merge.
 
 *This line marks the first commit to feature*
 
@@ -229,7 +229,7 @@ Auto-merging README.md
 CONFLICT (content): Merge conflict in README.md
 ```
 
-Going back even further in time to `feature-2`, a branch that was never squashed to develop
+Compare the manual conflict resolution to merging `develop` into `feature-2`, a branch that was even older
 
 ```bash
 t checkout feature-2                
@@ -274,7 +274,7 @@ Fast-forward
 
 *Automatic fast-forward*. Even with all those extra changes, it's easy.
 
-The irony here is that a branch that's closer to `develop`, `feature-4` is *harder* to merge, than `feature-2` that is older and further apart, was automatically merged w/o manual intervention.
+The irony here is that a branch that's closer to `develop`, `feature-4` is *harder* to merge, than `feature-2` that is older and further apart, could automatically be merged - no manual intervention needed.
 
 ##  6. <a name='Otherissuesandpossiblesolutions'></a>Other issues
 
