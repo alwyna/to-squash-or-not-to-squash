@@ -87,3 +87,21 @@ to be precise:
 ![alt text](image-7.png)
 
 *this line marks the end of the feature 4*
+
+Seventh PR (feature-4 to develop)
+
+**NO CONFLICT, squashing!**
+
+![alt text](image-11.png)
+
+to be precise:
+
+![alt text](image-10.png)
+
+Eight PR (develop to main)
+
+![alt text](image-12.png)
+
+Regular merge
+
+![alt text](image-13.png)
