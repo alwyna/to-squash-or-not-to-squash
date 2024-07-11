@@ -67,3 +67,22 @@ We branched off develop that had the merge commit from `feature-2`
 Switched to a new branch 'feature-3'
 
 *This line marks the commit to feature-3*
+
+Fifth PR (feature-3 to develop)
+
+**NO CONFLICT, squashing!**
+
+![alt text](image-4.png)
+
+![alt text](image-5.png)
+
+Sixth PR (develop to main)
+
+**NO CONFLICT, and NOT squashing (merge commit)**
+
+![alt text](image-6.png)
+
+to be precise:
+
+![alt text](image-7.png)
+
